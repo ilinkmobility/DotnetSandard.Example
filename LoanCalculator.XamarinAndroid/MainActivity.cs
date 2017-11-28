@@ -16,11 +16,21 @@ namespace LoanCalculator.XamarinAndroid
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
+            var editAmount = FindViewById<TextView>(Resource.Id.EditAmount);
+            var editPeriod = FindViewById<TextView>(Resource.Id.EditPeriod);
+            var editRate = FindViewById<TextView>(Resource.Id.EditRate);
+
+            Button calculatebutton = FindViewById<Button>(Resource.Id.CalculateButton);
+
             var txtEMI = FindViewById<TextView>(Resource.Id.txtEMI);
+            var txtInterest = FindViewById<TextView>(Resource.Id.txtInterest);
 
-            var emi = PersonalLoanCalculator.Instance.GetEMI(480000, 5, 11.25);
-
-            txtEMI.Text = "Monthly EMI : " + string.Format("{0:0.##}", emi);
+            calculatebutton.Click += delegate {
+                var emi = PersonalLoanCalculator.Instance.GetEMI(int.Parse(editAmount.Text), int.Parse(editPeriod.Text), double.Parse(editRate.Text));
+                var interest = PersonalLoanCalculator.Instance.GetTotalInterestPaid(int.Parse(editAmount.Text), int.Parse(editPeriod.Text), double.Parse(editRate.Text));
+                txtEMI.Text = "Monthly EMI : " + string.Format("{0:0.##}", emi);
+                txtInterest.Text = "Interest : " + string.Format("{0:0.##}", interest);
+            };
         }
     }
 }

@@ -3,10 +3,58 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+  <TextView
+    android:id="@+id/txtAmount"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="AMOUNT"/>
+  <EditText
+        android:id="@+id/EditAmount"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+  <TextView
+    android:id="@+id/txtPeriod"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="PERIOD"/>
+  <EditText
+        android:id="@+id/EditPeriod"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+  <TextView
+    android:id="@+id/txtRate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="RATE"/>
+  <EditText
+        android:id="@+id/EditRate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+  <Button
+     android:id="@+id/CalculateButton"
+     android:layout_height="wrap_content"
+     android:layout_width="wrap_content"
+     android:text="Calculate" />
+
   <TextView
     android:id="@+id/txtEMI"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:padding="10dp"
-    android:text="Default"/>
+    android:text=""/>
+
+  <TextView
+    android:id="@+id/txtInterest"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text=""/>
+
 </LinearLayout>

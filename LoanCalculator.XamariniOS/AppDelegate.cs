@@ -1,5 +1,6 @@
 ﻿using Foundation;
 using UIKit;
+using Xamarin;
 
 namespace LoanCalculator.XamariniOS
 {
@@ -18,6 +19,10 @@ namespace LoanCalculator.XamariniOS
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
+            #if ENABLE_TEST_CLOUD
+            Xamarin.Calabash.Start();
+            #endif
+
             // create a new window instance based on the screen size
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
