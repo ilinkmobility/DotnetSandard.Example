@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="ed2bde8a-a428-4b8d-a5af-fe413f2a9ea2"
-    Publisher="CN=vignesha"
+    Name="271ead4b-3073-4e4d-90e7-1f99773404f3"
+    Publisher="CN=aarooraa"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="ed2bde8a-a428-4b8d-a5af-fe413f2a9ea2" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="271ead4b-3073-4e4d-90e7-1f99773404f3" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>LoanCalculator.UWP</DisplayName>
-    <PublisherDisplayName>vignesha</PublisherDisplayName>
+    <PublisherDisplayName>aarooraa</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

@@ -7,20 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Foreground="Black" HorizontalAlignment="Center"  Text="AMOUNT" Margin="0,20,0,0"/>
-        <TextBox HorizontalAlignment="Center" Width="300" Text="{Binding amount, Mode=TwoWay}"/>
-        <TextBlock Foreground="Black" HorizontalAlignment="Center" Text="PERIOD"/>
-        <TextBox HorizontalAlignment="Center" Width="300" Text="{Binding period, Mode=TwoWay}"/>
-        <TextBlock Foreground="Black" HorizontalAlignment="Center" Text="RATE"/>
-        <TextBox HorizontalAlignment="Center" Width="300" Text="{Binding rate, Mode=TwoWay}" Margin="0,0,0,20"/>
-
-        <Button Click="Button_Click_Calculate" Content="CALCULATE" HorizontalAlignment="Center"/>
-
-        <StackPanel Orientation="Vertical" Visibility="{Binding Result, Mode=TwoWay}" Margin="20">
-            <TextBlock Foreground="Black" HorizontalAlignment="Center" Text="{Binding emi, Mode=TwoWay}"/>
-            <TextBlock Foreground="Black" HorizontalAlignment="Center" Text="{Binding interest, Mode=TwoWay}"/>
-        </StackPanel>
-
+    <StackPanel Padding="20" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Text="Amount" />
+        <TextBox Text="{Binding Amount, Mode=TwoWay}" InputScope="CurrencyAmount" />
+        <TextBlock Text="Period" Margin="0, 20, 0, 0" />
+        <TextBox Text="{Binding Period, Mode=TwoWay}" InputScope="Digits" />
+        <TextBlock Text="Rate" Margin="0, 20, 0, 0" />
+        <TextBox Text="{Binding Rate, Mode=TwoWay}" InputScope="Number" />
+        <Button Content="Calculate" Command="{Binding Path=CalculateCommand}" Margin="0, 20, 0, 0" />
+        <TextBlock Text="{Binding EMI}" Margin="0, 20, 0, 0" />
+        <TextBlock Text="{Binding Interest}" />
     </StackPanel>
 </Page>
